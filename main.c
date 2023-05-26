@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+/*Klavyeden -1 girilene kadar verilen tek sayıları tek bağlı doğrusal bir listenin başına,
+verilen çift sayıları ise listenin sonuna ekleyen programi yazınız.*/
+
+
+
+
+ struct dugum
+ {
+    int data;
+    struct dugum* next;
+ };
+
+struct dugum* basa_ekle(struct dugum* head, int data)
+{
+    struct dugum* yeni_dugum = (struct dugum*)malloc(sizeof(struct dugum));
+    yeni_dugum->data = data;
+    yeni_dugum->next = head;
+    return yeni_dugum;
+}
+
+struct dugum* sona_ekle(struct dugum* head, int data)
+{
+    struct dugum* yeni_dugum = (struct dugum*)malloc(sizeof(struct dugum));
+
+    yeni_dugum->data = data;
+    yeni_dugum->next = NULL;
+
+    if (head == NULL)
+        return yeni_dugum;
+
+    struct dugum* current = head;
+
+    while (current->next != NULL)
+        current = current->next;
+        current->next = yeni_dugum;
+    return head;
+}
+
+void listele(struct dugum* head)
+{
+    struct dugum* current = head;
+    while (current != NULL)
+        {
+        printf("%d ", current->data);
+        current = current->next;
+        }
+    printf("\n");
+}
+
+int main()
+{
+    struct dugum* head = NULL;
+    int num;
+
+    while (1)
+        {
+        printf("sayi girin (Cikmak icin -1): ");
+        scanf("%d", &num);
+        if (num == -1)
+            break;
+        if (num % 2 == 0)
+            head = sona_ekle(head, num);
+        else
+            head = basa_ekle(head, num);
+        }
+
+    printf("Liste: ");
+    listele(head);
+    return 0;
+}

@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 
-/*Klavyeden -1 girilene kadar verilen tek sayıları tek bağlı doğrusal bir listenin başına,
-verilen çift sayıları ise listenin sonuna ekleyen programi yazınız.*/
+/*Klavyeden -1 girilene kadar verilen tek sayÃ½larÃ½ tek baÃ°lÃ½ doÃ°rusal bir listenin baÃ¾Ã½na,
+verilen Ã§ift sayÃ½larÃ½ ise listenin sonuna ekleyen programi yazÃ½nÃ½z.*/
 
 
 

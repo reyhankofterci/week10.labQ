@@ -5,8 +5,8 @@
 
 
 /*Kendisine parametre olarak aktarilan head isimli liste ve  yas
-parametresine göre işlem yapan fonksiyon, listedeki yas degerine
-sahip ikinci düğümü bularak silmektedir (bu düğümü belleğe iade etmekte)
+parametresine gÃ¶re iÃ¾lem yapan fonksiyon, listedeki yas degerine
+sahip ikinci dÃ¼Ã°Ã¼mÃ¼ bularak silmektedir (bu dÃ¼Ã°Ã¼mÃ¼ belleÃ°e iade etmekte)
 asagida verilen prototipi kullanarak gerekli fonksiyonu yaziniz.
 
 node deleteNode(node", int);
